@@ -1,7 +1,21 @@
-import { Accordion, Box, Divider, List, Space, Text } from '@mantine/core';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Carousel } from '@mantine/carousel';
+import {
+  Accordion,
+  Box,
+  Divider,
+  Flex,
+  Image,
+  List,
+  SimpleGrid,
+  Space,
+  Text,
+} from '@mantine/core';
 import type { FC } from 'react';
 
 import { BoxWithTitle } from '@/components/common/BoxWithTitle';
+import { CategoryCard } from '@/components/common/CategoryCard';
+import { categoryList } from '@/constants/category-list';
 
 export const Root: FC = () => {
   return (
@@ -27,15 +41,17 @@ export const Root: FC = () => {
       <Space h="xl" />
       <Divider />
 
+      <Space h={40} />
+
       <BoxWithTitle title="本論">
-        <div>
+        <div className="break-words">
           <Accordion defaultValue="customization" variant="filled">
             <Accordion.Item value="検証の流れ・方法">
               <Accordion.Control>
                 <Text weight="bold">検証の流れ・方法</Text>
               </Accordion.Control>
               <Accordion.Panel>
-                <List listStyleType="number">
+                <List listStyleType="number" className="break-words">
                   <List.Item>
                     先生からの宿題
                     <List>
@@ -108,7 +124,7 @@ export const Root: FC = () => {
               </Accordion.Panel>
             </Accordion.Item>
           </Accordion>
-          <List listStyleType="number">
+          <List listStyleType="number" className="w-11/12">
             ☆考えうる当たり前の定義を複数あげて検証することを繰り返す
             <List.Item>
               コンテンツの再定義
@@ -123,13 +139,238 @@ export const Root: FC = () => {
               <List listStyleType="disc">
                 <List.Item>当たり前の物事を時間軸で見て考える</List.Item>
                 <List.Item>
-                  当たり前として普及され始めた期間や年数がカテゴリの中でも違うので、そこを時間軸(3次元化)で考えて比較した
+                  当たり前として普及され始めた期間や年数がカテゴリの中でも違うので、そこを時間軸(3次元化)
+                  で考えて比較した
                 </List.Item>
               </List>
             </List.Item>
           </List>
         </div>
       </BoxWithTitle>
+
+      <Space h={40} />
+
+      <BoxWithTitle title="結論">
+        <>
+          <Text weight="bold">作成モデル</Text>
+          <Text>
+            当たり前の物事を、時間軸(Z軸)で捉えて、3次元化したモデルを作成しました。
+            <br />
+            <Text color="gray" size="sm">
+              当たり前として普及し始めた時を起点として、受け入れられている期間が長いほど、時間軸(Z軸)は長くなります。
+              0年をO(原点)、2023年現在を一番上の目盛りとして、普遍化された物事の年数をZ軸の長さで比較しました。
+              ※0年以前(紀元前)に始まったことは、マイナス軸を起点とします。
+            </Text>
+          </Text>
+          <Divider />
+          <Flex>
+            <Box w={'40%'} p={8}>
+              <Image src={'/images/ThreeDModel.svg'} alt="3次元化モデル" />
+            </Box>
+            <Box w={'60%'} pl={20} py={8}>
+              <List>
+                <List.Item>
+                  娯楽
+                  <List withPadding>
+                    <List.Item>
+                      <Text>
+                        <span className="text-cyan-400">①</span>
+                        人生の活力になる
+                      </Text>
+                    </List.Item>
+                    <List.Item>
+                      <Text>
+                        <span className="text-cyan-400">②</span>
+                        心が豊かになるもの
+                      </Text>
+                    </List.Item>
+                  </List>
+                </List.Item>
+                <List.Item>
+                  社会活動
+                  <List withPadding>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#000AFF]">①</span>
+                        自ら行動するもの
+                      </Text>
+                    </List.Item>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#000AFF]">②</span>
+                        目的を果たすために行動する
+                      </Text>
+                    </List.Item>
+                  </List>
+                </List.Item>
+                <List.Item>
+                  食
+                  <List withPadding>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#000AFF]">①</span>
+                        人によって好みが違う
+                      </Text>
+                    </List.Item>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#000AFF]">②</span>
+                        目的を果たすために行動する
+                      </Text>
+                    </List.Item>
+                  </List>
+                </List.Item>
+                <List.Item>
+                  住
+                  <List withPadding>
+                    <List.Item>① 雨風を防げる</List.Item>
+                    <List.Item>②プライバシーが保護されている</List.Item>
+                  </List>
+                </List.Item>
+                <List.Item>
+                  衣類
+                  <List withPadding>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#F24E1E]">①</span>
+                        服を着て外出する
+                      </Text>
+                    </List.Item>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#F24E1E]">②</span>
+                        重ね着や腕捲りなどで体温調節ができる
+                      </Text>
+                    </List.Item>
+                  </List>
+                </List.Item>
+                <List.Item>
+                  公共福祉
+                  <List withPadding>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#25872F]">①</span>
+                        社会福祉は社会的弱者に対するものである
+                      </Text>
+                    </List.Item>
+                    <List.Item>
+                      <Text>
+                        <span className="text-[#25872F]">②</span>
+                        生活保護を受けることができ、
+                        最低限の生活が保障されている
+                      </Text>
+                    </List.Item>
+                  </List>
+                </List.Item>
+              </List>
+            </Box>
+          </Flex>
+        </>
+      </BoxWithTitle>
+
+      <Space h={40} />
+      <BoxWithTitle title="カテゴリ別の結論" isNoBox>
+        <SimpleGrid
+          sx={{
+            gap: 12,
+          }}
+          cols={3}
+          breakpoints={[
+            { maxWidth: 'md', cols: 3, spacing: 'md' },
+            { maxWidth: 'sm', cols: 2, spacing: 'sm' },
+            { maxWidth: 'xs', cols: 1, spacing: 'sm' },
+          ]}
+        >
+          {categoryList.map((item, i) => {
+            return (
+              <CategoryCard
+                key={i}
+                title={item.title}
+                description={item.description}
+                membersImage={item.membersImage}
+                href={`/category/${item.href}`}
+              />
+            );
+          })}
+        </SimpleGrid>
+      </BoxWithTitle>
+      <Space h={40} />
+      <BoxWithTitle title="考察">
+        <div>
+          <Text weight="bold">本研究の限界・今後の展望</Text>
+          <List listStyleType="number" className="w-11/12">
+            <List.Item>
+              今回はあたりまえを6分野に分類したが、各分野の抽象度にばらつきがある。
+              <List listStyleType="revert-layer">
+                <List.Item>
+                  例えば、「信仰」分野は、厳密にいえば「文化・習慣」分野の部分集合とみなせるので、比較的抽象度が低いと言える。
+                </List.Item>
+                <List.Item>
+                  改善案としては、諸科学分野による分類が挙げられよう。例えば、「本能」分野は「生物学的要因」に置き換えた方がより広範囲をカバーできるかもしれない。同様に「文化・習慣」分野も「社会学的要因」とした方が望ましいかもしれない。このようにすれば、今回に比して、各分野の抽象度は均等になる。
+                </List.Item>
+              </List>
+            </List.Item>
+            <List.Item>
+              本研究は、類型化を通して「あたりまえ」の定義を行った。しかし、あたりまえを疑い、新たなシーズを発見する具体的な手法は分析されなかった。今回明らかになった「考える必要・疑う必要のないこと」をもとに、実際にシーズを発見し、どのようにして新たな創作を行うかを考察すべきであろう。
+            </List.Item>
+            <List.Item>
+              例
+              <List listStyleType="revert-layer">
+                <List.Item>
+                  小型化 e.g.スマホはPCを小型化することで、新規性を獲得した。
+                </List.Item>
+                <List.Item>
+                  電子化
+                  e.g.電子メールは手紙を電子化することで、新規性を獲得した。
+                </List.Item>
+                <List.Item>
+                  マッチングシステムの導入 e.g.Uber
+                  Eatsは、配達作業にマッチングシステムを導入することで、流通に革新をもたらした。
+                </List.Item>
+                <List.Item>
+                  サブスクリプションの導入 e.g.Apple
+                  Musicは、音楽を「所有」から「利用」する形態を考案し、音楽の販売・サービス業界に革新をもたらした。
+                </List.Item>
+              </List>
+            </List.Item>
+            <List.Item>
+              こうした小型化や電子化などのアイデアは、新規性を持った商品・サービスを企画するための実践的な発想法である。
+            </List.Item>
+            <List.Item>
+              これらをケーススタディによって抽出し体系化することが、今後の課題である。
+            </List.Item>
+          </List>
+        </div>
+      </BoxWithTitle>
+      <Space h={40} />
+
+      <BoxWithTitle title="授業風景">
+        <Carousel
+          slideSize="70%"
+          align="start"
+          slideGap="sm"
+          controlsOffset="md"
+          controlSize={28}
+          withIndicators
+        >
+          <Carousel.Slide>
+            <Image src="/images/carousel/1.jpg" alt="授業風景1" />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <Image src="/images/carousel/2.jpg" alt="授業風景2" />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <Image src="/images/carousel/3.jpg" alt="授業風景3" />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <Image src="/images/carousel/4.jpg" alt="授業風景4" />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <Image src="/images/carousel/5.jpg" alt="授業風景5" />
+          </Carousel.Slide>
+        </Carousel>
+      </BoxWithTitle>
+      <Space h={40} />
     </>
   );
 };
