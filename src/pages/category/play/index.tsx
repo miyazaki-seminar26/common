@@ -2,6 +2,7 @@ import { Box, Center, Container, Image, Text } from '@mantine/core';
 import type { NextPage } from 'next';
 
 import { AppLayoutWithHeader } from '@/components/layouts/AppLayoutWithHeader';
+import { Play } from '@/components/pages/category/play';
 
 const PlayPage: NextPage = () => {
   return (
@@ -16,13 +17,15 @@ const PlayPage: NextPage = () => {
           />
         </Box>
         <Text weight={800} size="lg" className="z-10 font-sans">
-          娯楽において
+          住において
           <br />
           それって当たり前ですか？
         </Text>
       </Center>
 
-      <Container mx={{ md: 'auto', xs: 0 }}></Container>
+      <Container mx={{ md: 'auto', xs: 0 }}>
+        <Play />
+      </Container>
     </AppLayoutWithHeader>
   );
 };
