@@ -1,6 +1,8 @@
 import { Box, Flex } from '@mantine/core';
 import type { FC, ReactNode } from 'react';
 
+import { HEADERLINKS } from '@/constants/links';
+
 import { AppFooter } from './footer';
 import { AppHeader } from './header';
 
@@ -13,26 +15,7 @@ export const AppLayoutWithHeader: FC<Props> = ({ children }) => {
     <Box className="min-h-screen">
       <Flex className="w-full justify-between">
         <div className="sticky top-0 z-20 w-screen">
-          <AppHeader
-            links={[
-              {
-                link: '/',
-                label: 'テーマ',
-              },
-              {
-                link: '/',
-                label: 'カテゴリ別の結論',
-              },
-              {
-                link: '/',
-                label: '結論',
-              },
-              {
-                link: '/',
-                label: '考察',
-              },
-            ]}
-          />
+          <AppHeader links={HEADERLINKS} />
         </div>
       </Flex>
 
