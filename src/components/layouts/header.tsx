@@ -9,7 +9,6 @@ import {
   Transition,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { useState } from 'react';
 
 const HEADER_HEIGHT = 60;
 
@@ -97,24 +96,21 @@ interface HeaderResponsiveProps {
 
 export const AppHeader = ({ links }: HeaderResponsiveProps) => {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0]?.link);
+
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <a
+    <Anchor
+      variant="text"
       key={link.label}
       href={link.link}
-      className={cx(classes.link, {
-        [classes.linkActive]: active === link.link,
-      })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
+      className={`${cx(classes.link)} `}
+      onClick={() => {
         close();
       }}
     >
       {link.label}
-    </a>
+    </Anchor>
   ));
 
   return (

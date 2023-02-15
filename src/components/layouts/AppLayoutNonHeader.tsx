@@ -1,6 +1,8 @@
 import { Box, Center, Container, Text } from '@mantine/core';
 import type { FC, ReactNode } from 'react';
 
+import { HEADERLINKS } from '@/constants/links';
+
 import { AppFooter } from './footer';
 import { AppHeader } from './header';
 
@@ -20,26 +22,7 @@ export const TopPageNonHeaderLayout: FC<Props> = ({ children }) => {
         </Center>
       </div>
       <div className="sticky top-0 z-20 w-full">
-        <AppHeader
-          links={[
-            {
-              link: '/',
-              label: 'テーマ',
-            },
-            {
-              link: '/',
-              label: 'カテゴリ別の結論',
-            },
-            {
-              link: '/',
-              label: '結論',
-            },
-            {
-              link: '/',
-              label: '考察',
-            },
-          ]}
-        />
+        <AppHeader links={HEADERLINKS} />
       </div>
       <main className="min-h-screen">
         <Container className="min-h-full pt-6" mx={{ md: 'auto', xs: 0 }}>

@@ -111,19 +111,19 @@ export const categoryList: Props[] = [
       '食事とは、栄養摂取のための行為であり、文化的な営みでもある。食の当たり前は、社会の発展に伴って文化習慣の要素が強くなったが、根底には本能と科学的事実がある。',
     membersImage: [
       {
-        src: '/images/category/clothes/1.jpg',
+        src: '/images/category/food/1.jpg',
         alt: '1',
       },
       {
-        src: '/images/category/clothes/2.jpg',
+        src: '/images/category/food/2.jpg',
         alt: '2',
       },
       {
-        src: '/images/category/clothes/3.jpg',
+        src: '/images/category/food/3.jpg',
         alt: '3',
       },
       {
-        src: '/images/category/clothes/4.jpg',
+        src: '/images/category/food/4.jpg',
         alt: '4',
       },
     ],
@@ -135,19 +135,19 @@ export const categoryList: Props[] = [
       '人間の生活の基本でありその存在そのものが当たり前である。住の当たり前は信仰以外の要素に満遍なく配置された。時代や環境の変化に伴い当たり前も変化していく。',
     membersImage: [
       {
-        src: '/images/category/clothes/1.jpg',
+        src: '/images/category/house/1.jpg',
         alt: '1',
       },
       {
-        src: '/images/category/clothes/2.jpg',
+        src: '/images/category/house/2.jpg',
         alt: '2',
       },
       {
-        src: '/images/category/clothes/3.jpg',
+        src: '/images/category/house/3.jpg',
         alt: '3',
       },
       {
-        src: '/images/category/clothes/4.jpg',
+        src: '/images/category/house/4.jpg',
         alt: '4',
       },
     ],
