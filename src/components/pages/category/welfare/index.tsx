@@ -13,16 +13,19 @@ export const Welfare: FC = () => {
               疑問を持たないもの
             </Text>
             <List listStyleType="number" withPadding size="sm">
-              <List.Item>社会に貢献する</List.Item>
-              <List.Item>自ら行動するものである</List.Item>
-              <List.Item>目的を果たすために行動する</List.Item>
-              <List.Item>コミュニケーションを取る</List.Item>
-              <List.Item>仕事において時間を守る</List.Item>
-              <List.Item>仕事や学校のルール・規則を守る</List.Item>
-              <List.Item>人に迷惑をかけたらいけない</List.Item>
-              <List.Item>現状よりも良いもの目指して（志向）</List.Item>
               <List.Item>
-                どこにいようがネットを使ってコンタクトを取れる
+                そもそも日本に社会福祉と呼べる制度がある事（社会福祉がない国もある）
+              </List.Item>
+              <List.Item>失業手当、年金、介護保険がある</List.Item>
+              <List.Item>社会福祉は社会的弱者に対するものである</List.Item>
+              <List.Item>妊婦さんや高齢者に席を譲る</List.Item>
+              <List.Item>育休、産休がある</List.Item>
+              <List.Item>
+                医療保険制度があるので気軽に病院に行くことが出来る
+              </List.Item>
+              <List.Item>日本は義務教育制度がある</List.Item>
+              <List.Item>
+                生活保護を受けることが出来、最低限の生活を保障されている
               </List.Item>
             </List>
           </Box>
@@ -34,11 +37,11 @@ export const Welfare: FC = () => {
 
       <Space h={40} />
 
-      <BoxWithTitle title="社会活動における抽象化" isNoBox>
+      <BoxWithTitle title="公共福祉における抽象化" isNoBox>
         <Text size="sm">
-          社会活動を規定するのは、第一に、自分の価値を示すことで集団の中における生存を確保したり、自分の環境をより良いものにして快楽(幸福度)を増幅させたいという本能である。第二に、社会の中で、その社会に合わせた行動・考え方を大衆の大多数が採用すればそれは、社会における活動の大多数の当たり前になるというような同調性(大多数)の二つである。
-          (“周りに合わせる”という行動は全て“生存本能”に由来すると考えている。)
-          社会活動に関する本能の中で、生存本能と幸福度を増大させたいと言う本能についてはある程度普遍のものと言える。また、同調性(大多数)に関しては、個人が大多数の意見に賛同するのは人間の本能であり、社会はその個人から成るからこそ大多数が普遍のものとなる。
+          公共福祉における当たり前は、生まれた時からあり、違和感を感じないことから来るものである。
+          全体的に規則・法律によりがちである。
+          規則・法律に変化が生じ、時間が経過すると公共福祉における当たり前も変化する。
         </Text>
       </BoxWithTitle>
 

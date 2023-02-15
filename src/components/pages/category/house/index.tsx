@@ -13,17 +13,21 @@ export const House: FC = () => {
               疑問を持たないもの
             </Text>
             <List listStyleType="number" withPadding size="sm">
-              <List.Item>社会に貢献する</List.Item>
-              <List.Item>自ら行動するものである</List.Item>
-              <List.Item>目的を果たすために行動する</List.Item>
-              <List.Item>コミュニケーションを取る</List.Item>
-              <List.Item>仕事において時間を守る</List.Item>
-              <List.Item>仕事や学校のルール・規則を守る</List.Item>
-              <List.Item>人に迷惑をかけたらいけない</List.Item>
-              <List.Item>現状よりも良いもの目指して（志向）</List.Item>
-              <List.Item>
-                どこにいようがネットを使ってコンタクトを取れる
-              </List.Item>
+              <List.Item>床がある</List.Item>
+              <List.Item>安心感がある</List.Item>
+              <List.Item>お金がかかる</List.Item>
+              <List.Item>寝ることが出来る</List.Item>
+              <List.Item>建築物である</List.Item>
+              <List.Item>住所がある</List.Item>
+              <List.Item>公共施設もある</List.Item>
+              <List.Item>雨風を防げる</List.Item>
+              <List.Item>体を休めるためのもの</List.Item>
+              <List.Item>様々な種類がある</List.Item>
+              <List.Item>多くの時間を過ごす場所</List.Item>
+              <List.Item>時代や環境で変わる</List.Item>
+              <List.Item>QOLに直結する</List.Item>
+              <List.Item>プライバシーが保護されている</List.Item>
+              <List.Item>暑さや寒さを凌げる</List.Item>
             </List>
           </Box>
           <Box w={'64%'}>
@@ -34,11 +38,12 @@ export const House: FC = () => {
 
       <Space h={40} />
 
-      <BoxWithTitle title="社会活動における抽象化" isNoBox>
+      <BoxWithTitle title="住における抽象化" isNoBox>
         <Text size="sm">
-          社会活動を規定するのは、第一に、自分の価値を示すことで集団の中における生存を確保したり、自分の環境をより良いものにして快楽(幸福度)を増幅させたいという本能である。第二に、社会の中で、その社会に合わせた行動・考え方を大衆の大多数が採用すればそれは、社会における活動の大多数の当たり前になるというような同調性(大多数)の二つである。
-          (“周りに合わせる”という行動は全て“生存本能”に由来すると考えている。)
-          社会活動に関する本能の中で、生存本能と幸福度を増大させたいと言う本能についてはある程度普遍のものと言える。また、同調性(大多数)に関しては、個人が大多数の意見に賛同するのは人間の本能であり、社会はその個人から成るからこそ大多数が普遍のものとなる。
+          住は人間の生活の基本であり、住の存在そのものが当たり前である。
+          住の当たり前は信仰以外の要素に満遍なく配置された。
+          時代や環境の変化に伴い、住の当たり前も変化していく。
+          長く住んでいる人ほど、より当たり前になり、気に留めなくなる。
         </Text>
       </BoxWithTitle>
 
