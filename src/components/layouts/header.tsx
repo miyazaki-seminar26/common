@@ -1,11 +1,11 @@
 import {
+  Anchor,
   Burger,
   Container,
   createStyles,
   Group,
   Header,
   Paper,
-  Text,
   Transition,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -120,7 +120,9 @@ export const AppHeader = ({ links }: HeaderResponsiveProps) => {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Text weight="bold">それって当たり前ですか？</Text>
+        <Anchor variant="text" weight="bold" href="/">
+          それって当たり前ですか？
+        </Anchor>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

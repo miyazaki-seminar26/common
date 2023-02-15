@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from '@mantine/core';
+import { Box, Flex } from '@mantine/core';
 import type { FC, ReactNode } from 'react';
 
 import { AppFooter } from './footer';
@@ -36,9 +36,7 @@ export const AppLayoutWithHeader: FC<Props> = ({ children }) => {
         </div>
       </Flex>
 
-      <main className="min-h-screen bg-gray-100">
-        <Container mx={{ md: 'auto', xs: 0 }}>{children}</Container>
-      </main>
+      <main className="min-h-screen bg-gray-100">{children}</main>
       <AppFooter />
     </Box>
   );

@@ -27,6 +27,7 @@
     "@mantine/core": "^5.10.3",
     "@mantine/hooks": "^5.10.3",
     "embla-carousel-react": "^7.0.9",
+    "framer-motion": "^9.0.2",
     "next": "^13.1.2",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.45",
