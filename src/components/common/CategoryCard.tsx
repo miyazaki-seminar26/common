@@ -18,7 +18,7 @@ export const CategoryCard: FC<Props> = ({
   href,
 }) => {
   return (
-    <Card radius="md">
+    <Card radius="md" withBorder>
       <Text weight="bold">{title}</Text>
       <Text color="gray" size="sm">
         {description}

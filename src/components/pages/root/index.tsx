@@ -276,9 +276,9 @@ export const Root: FC = () => {
           }}
           cols={3}
           breakpoints={[
-            { maxWidth: 'md', cols: 3, spacing: 'md' },
-            { maxWidth: 'sm', cols: 2, spacing: 'sm' },
-            { maxWidth: 'xs', cols: 1, spacing: 'sm' },
+            { maxWidth: 'md', cols: 3, spacing: 'xl' },
+            { maxWidth: 'sm', cols: 2, spacing: 'lg' },
+            { maxWidth: 'xs', cols: 1, spacing: 'md' },
           ]}
         >
           {categoryList.map((item, i) => {
