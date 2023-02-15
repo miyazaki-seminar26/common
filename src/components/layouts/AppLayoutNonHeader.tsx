@@ -1,4 +1,5 @@
-import { Box, Center, Container, Text } from '@mantine/core';
+import { Box, Center, Container, Image, Text } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import type { FC, ReactNode } from 'react';
 
 import { HEADERLINKS } from '@/constants/links';
@@ -11,12 +12,23 @@ type Props = {
 };
 
 export const TopPageNonHeaderLayout: FC<Props> = ({ children }) => {
+  const matches = useMediaQuery('(min-width: 900px)');
+
   return (
     <Box className="min-h-screen bg-gray-50">
-      <div className="min-h-max">
-        背景に動く系の画像を入れる
-        <Center className="h-[98vh]">
-          <Text weight={800} size="xl" className="font-sans">
+      <div className="relative">
+        {matches ? (
+          <Box h="100vh" className="absolute w-full opacity-80">
+            <Image src="/images/firstview-bg.svg" alt="hero" height="99vh" />
+          </Box>
+        ) : (
+          <Box h="100vh" className="absolute -top-3 w-full opacity-60">
+            <Image src="/images/sp-firstview-bg.svg" alt="hero" height="99vh" />
+          </Box>
+        )}
+
+        <Center className="z-10 h-[100vh] w-full">
+          <Text weight={900} size="xl" className="font-sans">
             それって当たり前ですか？
           </Text>
         </Center>
