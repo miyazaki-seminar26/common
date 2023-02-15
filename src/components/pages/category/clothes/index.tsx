@@ -23,10 +23,7 @@ export const Clothes: FC = () => {
             </List>
           </Box>
           <Box w={'64%'}>
-            <Image
-              src="/images/category/social-activities/chart.svg"
-              alt="chart"
-            />
+            <Image src="/images/category/clothes/chart.svg" alt="chart" />
           </Box>
         </div>
       </BoxWithTitle>
