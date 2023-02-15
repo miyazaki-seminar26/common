@@ -3,7 +3,7 @@ import type { FC } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrandGithub, BrandInstagram, BrandTwitter } from 'tabler-icons-react';
 
-import { LINKS } from '../constants/links';
+import { LINKS } from '../../constants/links';
 
 export const AppFooter: FC = () => {
   return (

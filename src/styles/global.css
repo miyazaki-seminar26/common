@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* @tailwind base; */
 /* Mantineと競合してしまうため直書きに変更(下記URLが@tailwind base;の直書きとのこと)
   https://unpkg.com/tailwindcss@3.0.23/src/css/preflight.css
@@ -46,6 +45,8 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
+  /* custom cursor */
+  cursor: url('/images/ThreeDModel.svg'), auto;
 }
 
 /*

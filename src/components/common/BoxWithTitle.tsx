@@ -4,11 +4,12 @@ import type { FC } from 'react';
 type Props = {
   title: string;
   children: React.ReactNode;
+  isNoBox?: boolean;
 };
 
-export const BoxWithTitle: FC<Props> = ({ title, children }) => {
+export const BoxWithTitle: FC<Props> = ({ title, children, isNoBox }) => {
   return (
-    <Box my={8}>
+    <Box mt={12}>
       <Badge
         size="xl"
         color="blue.4"
@@ -22,9 +23,13 @@ export const BoxWithTitle: FC<Props> = ({ title, children }) => {
         {title}
       </Badge>
       <Space h="xl" />
-      <Box my={4} p={8} bg="white">
-        {children}
-      </Box>
+      {isNoBox ? (
+        children
+      ) : (
+        <Box my={4} p={8} bg="white" className="break-words">
+          {children}
+        </Box>
+      )}
     </Box>
   );
 };

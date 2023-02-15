@@ -12,7 +12,7 @@ export const AppLayoutWithHeader: FC<Props> = ({ children }) => {
   return (
     <Box className="min-h-screen">
       <Flex className="w-full justify-between">
-        <div className="sticky top-1/2 z-20 w-screen">
+        <div className="sticky top-0 z-20 w-screen">
           <AppHeader
             links={[
               {
@@ -37,9 +37,7 @@ export const AppLayoutWithHeader: FC<Props> = ({ children }) => {
       </Flex>
 
       <main className="min-h-screen bg-gray-100">
-        <Container className="min-h-full" mx={{ md: 'auto', xs: 0 }}>
-          {children}
-        </Container>
+        <Container mx={{ md: 'auto', xs: 0 }}>{children}</Container>
       </main>
       <AppFooter />
     </Box>
