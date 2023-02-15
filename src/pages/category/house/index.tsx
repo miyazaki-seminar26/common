@@ -17,7 +17,7 @@ const HousePage: NextPage = () => {
           />
         </Box>
         <Text weight={800} size="lg" className="z-10 font-sans">
-          社会活動において
+          住において
           <br />
           それって当たり前ですか？
         </Text>

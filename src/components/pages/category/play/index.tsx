@@ -13,35 +13,43 @@ export const Play: FC = () => {
               疑問を持たないもの
             </Text>
             <List listStyleType="number" withPadding size="sm">
-              <List.Item>社会に貢献する</List.Item>
-              <List.Item>自ら行動するものである</List.Item>
-              <List.Item>目的を果たすために行動する</List.Item>
-              <List.Item>コミュニケーションを取る</List.Item>
-              <List.Item>仕事において時間を守る</List.Item>
-              <List.Item>仕事や学校のルール・規則を守る</List.Item>
-              <List.Item>人に迷惑をかけたらいけない</List.Item>
-              <List.Item>現状よりも良いもの目指して（志向)</List.Item>
+              <List.Item>心が豊かになるもの</List.Item>
+              <List.Item>娯楽は仕事になる</List.Item>
+              <List.Item>人生の活力になる</List.Item>
+              <List.Item>自由に行動できる</List.Item>
               <List.Item>
-                どこにいようがネットを使ってコンタクトを取れる
+                感性によって楽しめる娯楽と楽しめない娯楽がある
               </List.Item>
+              <List.Item>
+                それをすることによって、人間の神経に訴えかけて自律神経 →
+                興奮・鎮静などの効果がある（セロトニン・オキシトシン・ドーパミン）
+              </List.Item>
+              <List.Item>ある程度精神安定が必要</List.Item>
+              <List.Item>お金がかかるものがある</List.Item>
+              <List.Item>無意識に楽しいと思ってること</List.Item>
+              <List.Item>
+                心理的に楽しむものと身体を使って楽しむものがある →
+                具体的な行動は時代によって変化する（今ならテレビ鑑賞・矢場）
+              </List.Item>
+              <List.Item>
+                何かしらそれ以外のことで活かせる可能性がある
+              </List.Item>
+              <List.Item>精神的な制限がない</List.Item>
+              <List.Item>元来人間は娯楽を求めている</List.Item>
             </List>
           </Box>
           <Box w={'64%'}>
-            <Image
-              src="/images/category/social-activities/chart.svg"
-              alt="chart"
-            />
+            <Image src="/images/category/play/chart.svg" alt="chart" />
           </Box>
         </div>
       </BoxWithTitle>
 
       <Space h={40} />
 
-      <BoxWithTitle title="社会活動における抽象化" isNoBox>
+      <BoxWithTitle title="娯楽における抽象化" isNoBox>
         <Text size="sm">
-          社会活動を規定するのは、第一に、自分の価値を示すことで集団の中における生存を確保したり、自分の環境をより良いものにして快楽(幸福度)を増幅させたいという本能である。第二に、社会の中で、その社会に合わせた行動・考え方を大衆の大多数が採用すればそれは、社会における活動の大多数の当たり前になるというような同調性(大多数)の二つである。
-          (“周りに合わせる”という行動は全て“生存本能”に由来すると考えている。)
-          社会活動に関する本能の中で、生存本能と幸福度を増大させたいと言う本能についてはある程度普遍のものと言える。また、同調性(大多数)に関しては、個人が大多数の意見に賛同するのは人間の本能であり、社会はその個人から成るからこそ大多数が普遍のものとなる。
+          娯楽の当たり前は、概ね事実と本能の要素で構成されている。
+          このことは、人間は昔から娯楽と共にあることや、科学的にも娯楽は人間に良い影響を与えることからもわかる。二つの観点から良い影響を与えるものが当たり前である。
         </Text>
       </BoxWithTitle>
 
