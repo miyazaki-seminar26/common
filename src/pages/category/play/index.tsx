@@ -17,7 +17,7 @@ const PlayPage: NextPage = () => {
           />
         </Box>
         <Text weight={800} size="lg" className="z-10 font-sans">
-          住において
+          娯楽において
           <br />
           それって当たり前ですか？
         </Text>
